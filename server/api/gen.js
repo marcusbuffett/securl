@@ -1,7 +1,7 @@
 var bcrypt = require('bcrypt');
 
 function genHash(pass) {
-  var salt = bcrypt.genSaltSync(10);
+  var salt = bcrypt.genSaltSync(4);
   var hash = bcrypt.hashSync(pass, salt);
   return hash;
 }

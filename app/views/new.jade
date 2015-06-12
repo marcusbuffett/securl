@@ -9,7 +9,7 @@ block content
   include ./header.jade
   .container
     p.info.
-      Input a URL and password below, then distribute the shortened URL. The recipient will have to enter the password to use the shortened URL.
+      Input a URL and password below, then distribute the shortened URL. The recipient will use the password to access the original URL. Your password is hashed using bcrypt, with a work factor of 10.
   .container
     form
       input(type="password" placeholder="PASSWORD")
