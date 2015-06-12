@@ -69,13 +69,13 @@ module.exports = function(grunt) {
         files: ['app/sass/*.scss'],
         tasks: ['wiredep', 'sass', 'postcss']
       },
-      wiredep: {
-        files: ['app/views/*.jade', 'app/index.jade'],
-        tasks: ['wiredep']
-      }
+      // wiredep: {
+        // files: ['app/views/*.jade', 'app/index.jade'],
+        // tasks: ['wiredep']
+      // }
     },
   });
   require('load-grunt-tasks')(grunt);
-  grunt.registerTask('build', ['wiredep', 'sass', 'postcss']);
+  grunt.registerTask('build', ['sass', 'postcss']);
   grunt.registerTask('c-build', ['build', 'watch']);
 };

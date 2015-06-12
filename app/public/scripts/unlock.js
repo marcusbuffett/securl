@@ -18,7 +18,6 @@ function submitPass() {
     password: inputPass,
     uuid: uuid
   };
-  console.log(uuid);
   $.ajax({
     url: '/submit-pass',
     type: "POST",
