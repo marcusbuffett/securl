@@ -15,7 +15,7 @@ Then you can go to localhost:9000 in your browser to see it in action.
 
 ## Requirements
 
--MongoDB
--Sass
--Node
--Grunt
+- MongoDB
+- Sass
+- Node
+- Grunt
