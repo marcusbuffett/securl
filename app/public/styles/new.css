@@ -1,0 +1,59 @@
+button {
+  height: 100%;
+  background-color: HSLA(26, 90%, 54%, 1);
+  background-color: #333333;
+  border: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  padding: 10px;
+}
+
+button:active {
+  background-color: HSLA(32, 98%, 57%, 1);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+body {
+  background-color: HSLA(0, 0%, 90%, 1);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.secondary-border, form input[type="text"], form input[type="password"], form input:focus {
+  /* border-width: 1px 1px 1px 1px; */
+  /* border-style: solid; */
+  /* border-color: $secondary; */
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+form input[type="password"] {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 15em;
+}
+form input[type="text"] {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 30em;
+}
+form input[type="text"], form input[type="password"] {
+  border-color: transparent;
+}
+
+/*# sourceMappingURL=new.css.map */

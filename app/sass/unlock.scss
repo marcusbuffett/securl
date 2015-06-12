@@ -1,0 +1,12 @@
+@import "colors";
+@import "forms";
+@import "header";
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+input[type="password"] {
+  margin-bottom: 20px;
+}

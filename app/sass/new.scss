@@ -1,0 +1,40 @@
+@import "colors";
+@import "forms";
+
+body {
+  background-color: HSLA(0, 0%, 90%, 1);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.secondary-border {
+    /* border-width: 1px 1px 1px 1px; */
+    /* border-style: solid; */
+    /* border-color: $secondary; */
+}
+
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  input[type="password"] {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 15em;
+  }
+  input[type="text"] {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 30em;
+  }
+  input[type="text"], input[type="password"] {
+    @extend .secondary-border;
+    border-color: transparent;
+  }
+  input:focus {
+    @extend .secondary-border;
+  }
+}

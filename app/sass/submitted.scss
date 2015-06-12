@@ -1,0 +1,16 @@
+@import "colors";
+.securl {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: $text-light-primary;
+    text-align: center;
+    font-size: 20px;
+    background-color: hsla(360, 0%, 20%, 1.0);
+    padding: 30px;
+    border-radius: 4px;
+  }
+}

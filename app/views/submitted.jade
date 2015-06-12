@@ -1,0 +1,20 @@
+extend ../index.jade
+block title
+  title="New URL"
+block styles
+  link(rel="stylesheet" href="/public/styles/header.css")
+  link(rel="stylesheet" href="/public/styles/submitted.css")
+
+block content
+  include ./header.jade
+  .container
+    p.info.
+      Your secure URL is below.
+    .securl
+      a(href=url)
+        =url
+
+block scripts
+  script(src="public/scripts/new.js")
+
+

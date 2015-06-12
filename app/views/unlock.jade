@@ -1,0 +1,22 @@
+extend ../index.jade
+block title
+  title="Unlock URL"
+block styles
+  link(rel="stylesheet" href="/public/styles/unlock.css")
+
+block content
+  include ./header.jade
+  .container
+    p.info.
+      This is a secure link, input the password to be redirected.
+  .container
+    .row
+      form
+        input(type="password" placeholder="PASSWORD")
+        button(type="button" onclick="submitPass()").
+          Unlock
+
+block scripts
+  script(src="public/scripts/unlock.js")
+
+

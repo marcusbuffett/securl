@@ -1,0 +1,14 @@
+@import "colors";
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center; 
+  justify-content: center;
+  background-color: hsla(0, 0%, 20%, 1.0);
+  padding: 10px 0 10px 0;
+  h1 {
+    font-size: 50px;
+    font-weight: 100;
+    color: $text-light-primary;
+  }
+}

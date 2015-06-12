@@ -1,0 +1,23 @@
+extend ../index.jade
+block title
+  title="New URL"
+block styles
+  link(rel="stylesheet" href="/public/styles/new.css")
+  link(rel="stylesheet" href="/public/styles/header.css")
+
+block content
+  include ./header.jade
+  .container
+    p.info.
+      Input a URL and password below, then distribute the shortened URL. The recipient will have to enter the password to use the shortened URL.
+  .container
+    form
+      input(type="password" placeholder="PASSWORD")
+      input(type="text" placeholder="URL")
+      button(type="button" onclick="submitURL()").
+        Submit
+
+block scripts
+  script(src="public/scripts/new.js")
+
+

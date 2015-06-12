@@ -1,0 +1,21 @@
+button {
+  height: 100%;
+  background-color: $secondary-dark;
+  background-color: hsla(0, 0%, 20%, 1.0);
+  border: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  padding: 10px;
+}
+button:active {
+  background-color: $secondary;
+}
+button:hover {
+  cursor: pointer;
+}
+input {
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+}
