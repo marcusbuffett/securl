@@ -1,6 +1,11 @@
 /*globals validator, $*/
 /*exported submitURL*/
 
+$('form').submit(function(ev) {
+  ev.preventDefault();
+  submitURL();
+});
+
 console.log('yeah');
 function submitURL() {
   var inputURL = $('input[type="text"]').val();

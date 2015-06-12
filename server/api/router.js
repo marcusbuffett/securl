@@ -50,7 +50,7 @@ router.post('/submit-pass', function(req, res) {
           res.send(destination);
         }
         else {
-          res.status(403).send('Incorrect');
+          res.status(403).send('Authorization failed');
 
         }
       });

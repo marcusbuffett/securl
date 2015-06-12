@@ -2,8 +2,12 @@
 /*exported submitPass*/
 
 //20 is the # of characters in the uuid
-var uuid = window.location.href.slice(-20);
-console.log(uuid);
+var uuid = window.location.href.split('/')[-1];
+
+$('form').submit(function(ev) {
+  ev.preventDefault();
+  submitPass();
+});
 
 function submitPass() {
   var inputPass = $('input[type="password"]').val();
@@ -17,9 +21,15 @@ function submitPass() {
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(sendObject),
   })
-  .done(function(data) {
-    console.log(data);
+  .fail(function() {
+    $('.info').text('Incorrect password.');
+    $('.info').addClass('error');
+
+  })
+  .done(function(url) {
+    $('.info').text('Redirecting...');
+    $('.info').removeClass('error');
+    window.location.href = url;
   });
-  //TODO: else
 
 }

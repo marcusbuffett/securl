@@ -1,16 +1,16 @@
 button {
   height: 100%;
-  background-color: HSLA(26, 90%, 54%, 1);
-  background-color: #333333;
+  background-color: HSLA(21, 100%, 45%, 1);
+  /* background-color: hsla(0, 0%, 20%, 1.0); */
   border: none;
   color: white;
   font-size: 30px;
   font-weight: 100;
-  padding: 10px;
+  padding: 20px;
 }
 
 button:active {
-  background-color: HSLA(32, 98%, 57%, 1);
+  background-color: HSLA(30, 100%, 48%, 1);
 }
 
 button:hover {
@@ -20,7 +20,7 @@ button:hover {
 input {
   border: none;
   font-size: 20px;
-  padding: 10px;
+  padding: 20px;
 }
 
 body {

@@ -12,7 +12,8 @@ block content
       Your secure URL is below.
     .securl
       a(href=url)
-        =url
+        //Remove http://
+        =url.substr(7)
 
 block scripts
   script(src="public/scripts/new.js")

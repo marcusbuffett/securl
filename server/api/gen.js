@@ -9,7 +9,7 @@ function genHash(pass) {
 function genUuid() {
   var uuid = '';
   var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 15; i++) {
     var randIndex = Math.floor(Math.random()*chars.length);
     uuid += chars[randIndex];
   }
