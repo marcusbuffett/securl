@@ -11,7 +11,7 @@ To get the app running, download the source, then run the following commands:
     grunt build
     grunt nodemon
 
-Then you can go to localhost:9000 in your browser to see it in action.
+Then you can go to http://localhost:9000/ in your browser to see it in action.
 
 ## Requirements
 
