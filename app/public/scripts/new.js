@@ -17,6 +17,15 @@ function submitURL() {
     destination += $.param(params);
     window.location.href = destination;
   }
+  $.ajax({
+    url: '/submit',
+    type: "POST",
+    contentType: 'application/json; charset=utf-8',
+    data: JSON.stringify({password: inputPass, url : inputURL})
+  })
+  .done(function(redirectURL) {
+    window.location.href = redirectURL;
+  });
   //TODO: else
 
 }

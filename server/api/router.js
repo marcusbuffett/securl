@@ -13,9 +13,9 @@ router.get('/new', function(req, res) {
   res.render('new');
 });
 
-router.get('/submit', function(req, res) {
-  var submittedUrl = req.query.url;
-  var submittedPass = req.query.password;
+router.post('/submit', function(req, res) {
+  var submittedUrl = req.body.url;
+  var submittedPass = req.body.password;
 
   var uuid = gen.genUuid();
   var hash = gen.genHash(submittedPass);
@@ -26,7 +26,11 @@ router.get('/submit', function(req, res) {
     hash: hash
   });
   newURL.save();
-  res.render('submitted', {url : config.domain + uuid});
+  res.send(config.domain + 'submitted/' + uuid);
+});
+
+router.get('/submitted/:uuid', function(req, res) {
+  res.render('submitted', {url: config.domain + req.params.uuid});
 });
 
 router.get('/:uuid', function(req, res) {
