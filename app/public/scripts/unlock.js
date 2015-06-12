@@ -3,6 +3,9 @@
 
 //20 is the # of characters in the uuid
 var uuid = window.location.href.split('/')[-1];
+var urlComponents = window.location.href.split('/');
+var uuid = urlComponents[urlComponents.length-1];
+
 
 $('form').submit(function(ev) {
   ev.preventDefault();
@@ -15,6 +18,7 @@ function submitPass() {
     password: inputPass,
     uuid: uuid
   };
+  console.log(uuid);
   $.ajax({
     url: '/submit-pass',
     type: "POST",
