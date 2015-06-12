@@ -48,6 +48,19 @@ module.exports = function(grunt) {
         script: 'server/app.js',
       }
     },
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('autoprefixer-core')({
+            browsers: ['last 2 versions']
+          })
+        ]
+      },
+      build: {
+        src: 'app/public/styles/*.css'
+      }
+    },
     watch: {
       options: {
         livereload: true
@@ -63,6 +76,6 @@ module.exports = function(grunt) {
     },
   });
   require('load-grunt-tasks')(grunt);
-  grunt.registerTask('build', ['wiredep', 'sass']);
+  grunt.registerTask('build', ['wiredep', 'sass', 'postcss']);
   grunt.registerTask('c-build', ['build', 'watch']);
 };
