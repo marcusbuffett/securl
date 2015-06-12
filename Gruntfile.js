@@ -67,7 +67,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['app/sass/*.scss'],
-        tasks: ['wiredep', 'sass']
+        tasks: ['wiredep', 'sass', 'postcss']
       },
       wiredep: {
         files: ['app/views/*.jade', 'app/index.jade'],
