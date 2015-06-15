@@ -25,5 +25,5 @@ app.use('/bower_components', express.static(path.join(config.appDir, 'bower_comp
 var router = require('./api/router.js');
 app.use('/', router); 
 
-app.listen(9000);
+app.listen(80);
 
