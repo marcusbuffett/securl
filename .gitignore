@@ -7,3 +7,4 @@ bower_components
 .*.swo
 .sass-cache
 styles
+log.txt
